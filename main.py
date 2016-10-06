@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-import win32evtlogutil
 from win32evtlog import*
 from win32event import*
+import win32evtlogutil
 from pywintypes import*
 from flask import Flask, render_template
 from flask_socketio import SocketIO, emit

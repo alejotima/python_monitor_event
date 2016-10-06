@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Monitor de Eventos</title>
+    <title>Monitor de eventos</title>
     <link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
     <script type="text/javascript" src="/static/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="/static/socket.io.js"></script>
@@ -13,10 +13,15 @@
                 socket.emit('my_event', {data: 'I\'m connected!'});
             });
             socket.on('my_response', function(msg) {
+                // console.log(msg);
                 if (msg.count === 1) {
                     $('#log').append('<br>' + $('<div/>').text( msg.data).html());
-                } 
+                }else{
+                    console.log(msg.data);
+                }
+                
             });
+
         });
     </script>
 </head>
